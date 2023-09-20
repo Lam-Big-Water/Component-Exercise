@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.shell {
+  width: 10rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 24, 39);
+  border-radius: 10px;
+  transition: all ease 0.3s;
+}
+.shell:hover {
+  width: 27rem;
+}
+.shell:hover:hover span {
+  opacity: 1;
+}
+.shell:hover {
+  width: 27rem;
+}
+.shell .box {
+  display: block;
+  width: 85%;
+  height: 15%;
+  margin: 9px;
+  border-radius: 5px;
+  position: relative;
+  transition: all ease 0.3s;
+  color: rgb(160, 160, 175);
+  backface-visibility: hidden;
+  animation-fill-mode: backwards;
+}
+.shell .box:hover {
+  background-color: rgb(55, 65, 81);
+  color: #fff;
+}
+.shell .box svg {
+  width: 6rem;
+  position: absolute;
+  margin: 7px 0 0 13px;
+}
+.shell .box:nth-child(1)::before, .shell .box:nth-child(5)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(55, 65, 81);
+  position: absolute;
+  bottom: -10px;
+}
+.shell .box span {
+  position: relative;
+  top: 22px;
+  left: 80px;
+  font: 500 2rem "";
+  opacity: 0;
+  transition: all ease 0.3s;
+}/*# sourceMappingURL=style.css.map */

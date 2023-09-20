@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+    height: 100vh;
+    padding: 2rem;
+}
+
+@mixin shellChange {
+    &:hover {
+        width: 27rem;
+        &:hover span {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin boxChange {
+    &:hover {
+        background-color: rgb(55, 65, 81);
+        color: #fff;
+    }
+}
+
+
+
+.shell {
+    width: 10rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 24, 39);
+    border-radius: 10px;
+    transition: all ease .3s;
+
+    @include shellChange;
+
+
+    &:hover {
+        width: 27rem;
+    }
+
+    & .box {
+        display: block;
+        width: 85%;
+        height: 15%;
+        margin: 9px;
+        border-radius: 5px;
+        position: relative;
+        transition: all ease .3s;
+        color: rgb(160, 160, 175);
+
+        @include boxChange;
+
+        backface-visibility: hidden;
+        animation-fill-mode: backwards;
+
+
+
+        & svg {
+            width: 6rem;
+            position: absolute;
+            margin: 7px 0 0 13px;
+        }
+
+        &:nth-child(1)::before,
+        &:nth-child(5)::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(55, 65, 81);
+            position: absolute;
+            bottom: -10px;
+        }
+
+        & span {
+            position: relative;
+            top: 22px;
+            left: 80px;
+            font: 500 2rem '';
+            opacity: 0;
+            transition: all ease .3s;
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+// .list {
+//     width: 4rem;
+// }
+// .house {
+//     width: 4rem;
+// }
+// .theme {
+//     width: 4rem;
+// }
+// .wallet {
+//     width: 4rem;
+// }
+// .picture {
+//     width: 4rem;
+// }
+// .code {
+//     width: 4rem;
+// }
+// .shield {
+//     width: 4rem;
+// }
+// .cancel {
+//     width: 4rem;
+// }
