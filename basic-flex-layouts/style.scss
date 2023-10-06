@@ -16,6 +16,15 @@ body {
     padding: 2rem;
 }
 
+@mixin layoutBasic {
+    max-width: 82rem;
+    background-color: #f0eeee;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+}
+
 @mixin box {
     height: 10rem;
     background-color: #A2CBFA;
@@ -24,12 +33,7 @@ body {
 }
 
 .stretch__all {
-    max-width: 82rem;
-    background-color: #f0eeee;
-    padding: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3px;
+    @include layoutBasic;
 
     & .container {
         display: flex;
@@ -50,12 +54,8 @@ body {
 }
 
 .stretch__middle {
-    max-width: 82rem;
-    background-color: #f0eeee;
-    padding: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3px;
+    @include layoutBasic;
+
 
     & .container {
         display: flex;
@@ -75,5 +75,77 @@ body {
             flex-grow: 3;
             @include box;
         }
+    }
+}
+
+.alternating__grid {
+    @include layoutBasic;
+
+
+    & .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+
+        & .item__top__left, & .item__top__right {
+            flex-grow: 1;
+            @include box;
+        }
+
+        & .item__middle {
+            width: 100%;
+            @include box;
+        }
+
+        & .item__bottom__left, & .item__bottom__right {
+            flex-grow: 1;
+            @include box;
+        }
+    }
+}
+
+.third_X_third__grid {
+    @include layoutBasic;
+
+
+    & .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem;
+        
+        & .item {
+            flex: 0 32%;
+            @include box;
+            margin-bottom: 2%;
+        }
+        
+    }
+}
+
+.third_X_third__grid_full {
+    @include layoutBasic;
+
+
+    & .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem;
+        
+        & .item {
+            flex: 0 32%;
+            padding-bottom: 32%;
+            @include box;
+            margin-bottom: 2%;
+            position: relative;
+        }
+        
     }
 }

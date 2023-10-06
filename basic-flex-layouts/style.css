@@ -69,4 +69,93 @@ body {
   background-color: #A2CBFA;
   border: 1px solid #4390E1;
   border-radius: 3px;
+}
+
+.alternating__grid {
+  max-width: 82rem;
+  background-color: #f0eeee;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+}
+.alternating__grid .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+}
+.alternating__grid .container .item__top__left, .alternating__grid .container .item__top__right {
+  flex-grow: 1;
+  height: 10rem;
+  background-color: #A2CBFA;
+  border: 1px solid #4390E1;
+  border-radius: 3px;
+}
+.alternating__grid .container .item__middle {
+  width: 100%;
+  height: 10rem;
+  background-color: #A2CBFA;
+  border: 1px solid #4390E1;
+  border-radius: 3px;
+}
+.alternating__grid .container .item__bottom__left, .alternating__grid .container .item__bottom__right {
+  flex-grow: 1;
+  height: 10rem;
+  background-color: #A2CBFA;
+  border: 1px solid #4390E1;
+  border-radius: 3px;
+}
+
+.third_X_third__grid {
+  max-width: 82rem;
+  background-color: #f0eeee;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+}
+.third_X_third__grid .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.third_X_third__grid .container .item {
+  flex: 0 32%;
+  height: 10rem;
+  background-color: #A2CBFA;
+  border: 1px solid #4390E1;
+  border-radius: 3px;
+  margin-bottom: 2%;
+}
+
+.third_X_third__grid_full {
+  max-width: 82rem;
+  background-color: #f0eeee;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+}
+.third_X_third__grid_full .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.third_X_third__grid_full .container .item {
+  flex: 0 32%;
+  padding-bottom: 32%;
+  height: 10rem;
+  background-color: #A2CBFA;
+  border: 1px solid #4390E1;
+  border-radius: 3px;
+  margin-bottom: 2%;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
