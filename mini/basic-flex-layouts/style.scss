@@ -149,3 +149,125 @@ body {
         
     }
 }
+
+.third_X_third__grid_16 {
+    @include layoutBasic;
+
+    & .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem;
+
+        & .item {
+            flex: 0 32%;
+            padding-bottom: 18%;
+            @include box;
+            margin-bottom: 2%;
+            position: relative;
+        }
+    }
+}
+
+.vertical__bar {
+    @include layoutBasic;
+
+    & .container {
+        height: 30rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        & .item {
+            width: 14%;
+            @include box;
+
+            &:nth-child(2n) {
+                height: 50%;
+            }
+        }
+    }
+}
+
+.horizontal__bar {
+    @include layoutBasic;
+
+    & .container {
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+
+
+        & .item {
+            height: 1rem;
+            width: 10%;
+            @include box;
+
+            &:nth-child(2n) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.vertical__stack {
+    @include layoutBasic;
+
+    & .container {
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+
+        & .item {
+            height: 1rem;
+            width: 50%;
+            @include box;
+        }
+    }
+}
+
+.masonry {
+    @include layoutBasic;
+
+    & .container {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        height: 58rem;
+
+        
+
+        & .item {
+            width: 32%;
+            margin-bottom: 2%;
+            @include box;
+    
+        }
+    }
+/* Re-order items into rows */
+.item:nth-child(3n+1) { order: 1;}
+.item:nth-child(3n+2) { order: 2; }
+.item:nth-child(3n)   { order: 3; }
+
+/* Force new columns */
+.container::before,
+.container::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+
+}
